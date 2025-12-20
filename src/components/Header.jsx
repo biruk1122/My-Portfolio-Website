@@ -1,3 +1,5 @@
+import {Globe} from 'lucide-react'
+
 function Header() {
 
     const navLinks=[
@@ -10,14 +12,8 @@ function Header() {
         <header className="bg-[#111111] text-white px-6 py-4 flex items-center justify-between border-b border-gray-800">
             {/* Navigation Links */}
             <div className="flex items-center">
-                <div className="w-10 h-10 text-cyan-400">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M12 2l9 5v10l-9 5-9-5V7l9-5z" />
-                        <path d="M12 22V12" />
-                        <path d="M21 7l-9 5" />
-                        <path d="M3 7l9 5" />
-                    </svg>
-                </div>
+               
+                <Globe className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]" size={50} strokewidth={1.5}/>
             </div>
 
             {/* Navigation Links */}
