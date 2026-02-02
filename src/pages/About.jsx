@@ -1,7 +1,34 @@
-import { Globe, Mail, Linkedin, Github, Briefcase, GraduationCap, Code, Sparkles, ChevronRight } from 'lucide-react';
+import { Globe, Mail, Linkedin, Github, Briefcase, GraduationCap, Code, Sparkles, ChevronRight, ChevronDown } from 'lucide-react';
+import { useState } from 'react';
 
 function About() {
-  
+  const [showFullSummary, setShowFullSummary] = useState(false);
+
+  const shortSummary = `
+    As a full-stack developer, my primary focus is on designing and developing web applications 
+    that are functional, visually appealing, and user-friendly. I have a solid understanding of 
+    modern web technologies, frameworks, and best practices that allow me to create custom 
+    solutions that meet unique needs.
+  `;
+
+  const fullSummary = `
+    As a full-stack developer, my primary focus is on designing and developing web applications 
+    that are functional, visually appealing, and user-friendly. I have a solid understanding of 
+    modern web technologies, frameworks, and best practices that allow me to create custom 
+    solutions that meet unique needs.
+
+    In my work, I have experience in developing both front-end and back-end functionality, 
+    including designing and implementing responsive layouts, customizing existing plugins or 
+    developing new ones, and integrating third-party APIs. I am familiar with popular web 
+    technologies like HTML, CSS, JavaScript, React, and Node.js, and use them effectively to 
+    develop high-quality applications.
+
+    In addition to technical skills, I possess strong problem-solving and analytical abilities, 
+    which help me to debug and troubleshoot issues effectively. I am also an excellent communicator, 
+    which allows me to collaborate effectively with clients and other team members to understand 
+    their needs and provide solutions that meet or exceed their expectations.
+  `;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0b0b0b] via-[#111111] to-[#0a0a0a] text-white font-sans">
       {/* Main Container */}
@@ -25,7 +52,7 @@ function About() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            WordPress Developer specializing in functional, visually appealing, and user-friendly websites
+           Full-stack developer specializing in functional, visually appealing, and user-friendly web applications.
           </p>
           
           {/* Animated underline */}
@@ -48,8 +75,8 @@ function About() {
                     <Code className="w-20 h-20 text-white" />
                   </div>
                 </div>
-                <h2 className="text-2xl font-bold text-white mb-2">WordPress Developer</h2>
-                <p className="text-gray-400">Custom WordPress Solutions</p>
+                <h2 className="text-2xl font-bold text-white mb-2">Fullstack Developer</h2>
+                <p className="text-gray-400">Custom Full-Stack Solutions</p>
               </div>
 
               {/* Contact Info */}
@@ -58,7 +85,7 @@ function About() {
                   <div className="p-2 bg-blue-500/10 rounded-lg group-hover/item:bg-blue-500/20 transition-colors">
                     <Briefcase className="w-5 h-5 text-blue-400" />
                   </div>
-                  <span className="text-gray-300 group-hover/item:text-white transition-colors">Freelance WordPress Developer</span>
+                  <span className="text-gray-300 group-hover/item:text-white transition-colors">Independent Full-Stack Developer</span>
                 </div>
                 <div className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 group/item">
                   <div className="p-2 bg-purple-500/10 rounded-lg group-hover/item:bg-purple-500/20 transition-colors">
@@ -127,13 +154,150 @@ function About() {
               
               <div className="space-y-6 text-gray-400 leading-relaxed text-lg">
                 <p className="hover:text-gray-300 transition-colors duration-300">
-                  As a WordPress developer, my primary focus is on designing and developing WordPress websites 
-                  that are functional, visually appealing, and user-friendly.
+                  {showFullSummary ? fullSummary : shortSummary}
                 </p>
-                <p className="hover:text-gray-300 transition-colors duration-300">
-                  I have a solid understanding of WordPress themes, plugins, and other features that allow me 
-                  to create custom WordPress solutions that meet my clients' unique needs.
-                </p>
+                
+                {/* See More Details Button */}
+                <div className="pt-4 border-t border-white/10">
+                  <button
+                    onClick={() => setShowFullSummary(!showFullSummary)}
+                    className="group/btn inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 border border-white/10 hover:border-white/20 transition-all duration-300"
+                  >
+                    <span className="text-blue-400 group-hover/btn:text-white transition-colors">
+                      {showFullSummary ? 'Show Less' : 'See More Details'}
+                    </span>
+                    <ChevronDown className={`w-5 h-5 text-blue-400 group-hover/btn:text-white transition-all duration-300 ${showFullSummary ? 'rotate-180' : ''}`} />
+                  </button>
+                </div>
+
+                {/* Additional Details - Shown only when expanded */}
+                {showFullSummary && (
+                  <div className="space-y-8 pt-8 border-t border-white/10 animate-fadeIn">
+                    {/* Technical Skills Section */}
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                        <div className="w-2 h-8 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></div>
+                        Technical Expertise
+                      </h3>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-4">
+                          <div className="flex items-center justify-between">
+                            <span className="text-gray-300">HTML</span>
+                            <span className="text-blue-400 font-bold">95%</span>
+                          </div>
+                          <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div className="w-[65%] h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                          </div>
+
+                           <div className="flex items-center justify-between">
+                            <span className="text-gray-300">CSS</span>
+                            <span className="text-blue-400 font-bold">95%</span>
+                          </div>
+                          <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div className="w-[65%] h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                          </div>
+
+                            <div className="flex items-center justify-between">
+                            <span className="text-gray-300">JavaScript</span>
+                            <span className="text-blue-400 font-bold">90%</span>
+                          </div>
+                          <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div className="w-[65%] h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                          </div>
+                          
+                          <div className="flex items-center justify-between">
+                            <span className="text-gray-300">Reactjs</span>
+                            <span className="text-blue-400 font-bold">90%</span>
+                          </div>
+                          <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div className="w-[80%] h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                          </div>
+                          
+                          <div className="flex items-center justify-between">
+                            <span className="text-gray-300">Nextjs</span>
+                            <span className="text-blue-400 font-bold">90%</span>
+                          </div>
+                          <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div className="w-[85%] h-full bg-gradient-to-r from-green-500 to-teal-500 rounded-full"></div>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-4">
+                          <div className="flex items-center justify-between">
+                            <span className="text-gray-300">Nodejs</span>
+                            <span className="text-blue-400 font-bold">65%</span>
+                          </div>
+                          <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div className="w-[65%] h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+                          </div>
+
+                           <div className="flex items-center justify-between">
+                            <span className="text-gray-300">Figma</span>
+                            <span className="text-blue-400 font-bold">65%</span>
+                          </div>
+                          <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div className="w-[65%] h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+                          </div>
+                          
+                          <div className="flex items-center justify-between">
+                            <span className="text-gray-300">WordPress</span>
+                            <span className="text-blue-400 font-bold">90%</span>
+                          </div>
+                          <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div className="w-[90%] h-full bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full"></div>
+                          </div>
+                          
+                          <div className="flex items-center justify-between">
+                            <span className="text-gray-300">Figma</span>
+                            <span className="text-blue-400 font-bold">80%</span>
+                          </div>
+                          <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div className="w-[60%] h-full bg-gradient-to-r from-pink-500 to-purple-500 rounded-full"></div>
+                          </div>
+
+                           <div className="flex items-center justify-between">
+                            <span className="text-gray-300">Figma</span>
+                            <span className="text-blue-400 font-bold">80%</span>
+                          </div>
+                          <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div className="w-[60%] h-full bg-gradient-to-r from-pink-500 to-purple-500 rounded-full"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Key Capabilities */}
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                        <div className="w-2 h-8 bg-gradient-to-b from-green-500 to-cyan-500 rounded-full"></div>
+                        Key Capabilities
+                      </h3>
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        {[
+                          'Front-end Development',
+                          'Back-end Development',
+                          'API Integration',
+                          'Responsive Design',
+                          'Performance Optimization',
+                          'Cross-browser Compatibility',
+                          'Plugin Development',
+                          'Theme Customization',
+                          'Debugging & Troubleshooting'
+                        ].map((capability, index) => (
+                          <div 
+                            key={index}
+                            className="px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 group/cap"
+                          >
+                            <div className="flex items-center gap-2">
+                              <div className="w-2 h-2 bg-green-500 rounded-full group-hover/cap:animate-pulse"></div>
+                              <span className="text-sm text-gray-300 group-hover/cap:text-white">{capability}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -190,28 +354,28 @@ function About() {
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">Bachelor's Degree</h3>
                     <p className="text-white font-medium">Electrical & Computer Engineering</p>
-                    <p className="text-gray-400 mt-2">Associa University</p>
+                    <p className="text-gray-400 mt-2">Assosa University</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Skills & Expertise */}
+            {/* Skills & Expertise - UPDATED FOR FULL-STACK DEVELOPMENT */}
             <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10 hover:border-white/20 transition-all duration-500">
               <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 EXPERTISE
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {[
-                  'WordPress Themes',
-                  'Plugin Development',
-                  'Custom Solutions',
-                  'UI/UX Design',
-                  'Responsive Design',
+                  'Frontend Development',
+                  'Backend Development',
+                  'Full-Stack Solutions',
+                  'RESTful APIs',
+                  'Database Design',
+                  'UI/UX Implementation',
+                  'Responsive Web Design',
                   'Performance Optimization',
-                  'E-commerce Solutions',
-                  'SEO Optimization',
-                  'Security Implementation'
+                  'System Architecture'
                 ].map((skill, index) => (
                   <div 
                     key={index}
@@ -226,11 +390,6 @@ function About() {
           </div>
         </div>
 
-        {/* Footer */}
-        <footer className="mt-16 pt-8 border-t border-white/10 text-center">
-          <p className="text-gray-500">© {new Date().getFullYear()} Biruk Fikadu. All rights reserved.</p>
-          <p className="mt-2 text-sm text-gray-600">WordPress Developer Portfolio</p>
-        </footer>
       </div>
     </div>
   );
