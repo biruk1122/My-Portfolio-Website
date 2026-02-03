@@ -1,5 +1,6 @@
 import { Globe, Mail, Linkedin, Github, Briefcase, GraduationCap, Code, Sparkles, ChevronRight, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function About() {
   const [showFullSummary, setShowFullSummary] = useState(false);
@@ -102,39 +103,52 @@ function About() {
                   STAY WITH ME
                 </h3>
                 <div className="flex justify-center gap-4">
-                  {[
-                    { icon: <Linkedin className="w-6 h-6" />, color: "blue", label: "LinkedIn" },
-                    { icon: <Github className="w-6 h-6" />, color: "gray", label: "GitHub" },
-                    { icon: <Mail className="w-6 h-6" />, color: "purple", label: "Email" }
-                  ].map((social, index) => (
-                    <a
-                      key={index}
-                      href="#"
-                      className="group/social relative p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-110"
-                      aria-label={social.label}
-                    >
-                      <div className={`text-${social.color}-400 group-hover/social:text-white transition-colors`}>
-                        {social.icon}
-                      </div>
-                    </a>
-                  ))}
+                  <a
+                    href="https://linkedin.com/in/biruk-fikadu-b6053a240"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/social relative p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:scale-110"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-6 h-6 text-blue-400 group-hover/social:text-white transition-colors" />
+                  </a>
+                  
+                  <a
+                    href="https://github.com/biruk1122"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/social relative p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-gray-400/30 transition-all duration-300 hover:scale-110"
+                    aria-label="GitHub"
+                  >
+                    <Github className="w-6 h-6 text-gray-400 group-hover/social:text-white transition-colors" />
+                  </a>
+                  
+                  <a
+                    href="mailto:birukfikadu29@gmail.com"
+                    className="group/social relative p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-all duration-300 hover:scale-110"
+                    aria-label="Email"
+                  >
+                    <Mail className="w-6 h-6 text-purple-400 group-hover/social:text-white transition-colors" />
+                  </a>
                 </div>
               </div>
             </div>
 
             {/* Let's Work Together Card */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 via-blue-700 to-purple-600 p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-500">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              
-              <div className="relative">
-                <h3 className="text-2xl font-bold mb-4">Let's work together</h3>
-                <p className="text-blue-100/80 mb-8">I create custom WordPress solutions that meet unique needs</p>
-                <button className="group/btn w-full bg-white text-blue-600 font-semibold py-4 px-6 rounded-xl hover:bg-gray-50 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
-                  <span>CONTACT ME</span>
-                  <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                </button>
+            <Link to="/contact">
+              <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 via-blue-700 to-purple-600 p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-500 cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                
+                <div className="relative">
+                  <h3 className="text-2xl font-bold mb-4">Let's work together</h3>
+                  <p className="text-blue-100/80 mb-8">I develop scalable full-stack solutions that meet unique technical and business requirements.</p>
+                  <div className="group/btn w-full bg-white text-blue-600 font-semibold py-4 px-6 rounded-xl hover:bg-gray-50 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <span>CONTACT ME</span>
+                    <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                  </div>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
 
           {/* Right Column - Content */}
@@ -186,7 +200,7 @@ function About() {
                             <span className="text-blue-400 font-bold">95%</span>
                           </div>
                           <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                            <div className="w-[65%] h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                            <div className="w-[65%] h-full bg-gradient-to-r from-yellow-500 to-cyan-200 rounded-full"></div>
                           </div>
 
                            <div className="flex items-center justify-between">
@@ -194,7 +208,7 @@ function About() {
                             <span className="text-blue-400 font-bold">95%</span>
                           </div>
                           <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                            <div className="w-[65%] h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                            <div className="w-[65%] h-full bg-gradient-to-r from-pink-500 to-cyan-100 rounded-full"></div>
                           </div>
 
                             <div className="flex items-center justify-between">
@@ -202,7 +216,7 @@ function About() {
                             <span className="text-blue-400 font-bold">90%</span>
                           </div>
                           <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                            <div className="w-[65%] h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                            <div className="w-[65%] h-full bg-gradient-to-r from-green-500 to-cyan-700 rounded-full"></div>
                           </div>
                           
                           <div className="flex items-center justify-between">
@@ -218,29 +232,29 @@ function About() {
                             <span className="text-blue-400 font-bold">90%</span>
                           </div>
                           <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                            <div className="w-[85%] h-full bg-gradient-to-r from-green-500 to-teal-500 rounded-full"></div>
+                            <div className="w-[85%] h-full bg-gradient-to-r from-red-500 to-teal-900 rounded-full"></div>
                           </div>
                         </div>
                         
                         <div className="space-y-4">
                           <div className="flex items-center justify-between">
                             <span className="text-gray-300">Nodejs</span>
-                            <span className="text-blue-400 font-bold">65%</span>
+                            <span className="text-blue-400 font-bold">90%</span>
                           </div>
                           <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                            <div className="w-[65%] h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+                            <div className="w-[65%] h-full bg-gradient-to-r from-green-900 to-red-100 rounded-full"></div>
                           </div>
 
                            <div className="flex items-center justify-between">
-                            <span className="text-gray-300">Figma</span>
-                            <span className="text-blue-400 font-bold">65%</span>
+                            <span className="text-gray-300">Mongodb</span>
+                            <span className="text-blue-400 font-bold">90%</span>
                           </div>
                           <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
                             <div className="w-[65%] h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
                           </div>
                           
                           <div className="flex items-center justify-between">
-                            <span className="text-gray-300">WordPress</span>
+                            <span className="text-gray-300">Sql</span>
                             <span className="text-blue-400 font-bold">90%</span>
                           </div>
                           <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
@@ -248,11 +262,11 @@ function About() {
                           </div>
                           
                           <div className="flex items-center justify-between">
-                            <span className="text-gray-300">Figma</span>
-                            <span className="text-blue-400 font-bold">80%</span>
+                            <span className="text-gray-300">Wordpress</span>
+                            <span className="text-blue-400 font-bold">95%</span>
                           </div>
                           <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                            <div className="w-[60%] h-full bg-gradient-to-r from-pink-500 to-purple-500 rounded-full"></div>
+                            <div className="w-[60%] h-full bg-gradient-to-r from-purple-500 to-pink-100 rounded-full"></div>
                           </div>
 
                            <div className="flex items-center justify-between">
