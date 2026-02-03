@@ -320,7 +320,7 @@ function Contact() {
                     Telegram
                   </a>
                   <a
-                    href="https://wa.me/15551234567"
+                    href="https://wa.me/+251928011632"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-6 py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-medium transition-all duration-300 flex items-center gap-2"
