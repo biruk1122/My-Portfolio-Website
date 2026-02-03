@@ -8,7 +8,7 @@ function Home() {
   const stats = [
     { value: "+02", label: "Years Experience" },
     { value: "+5", label: "Clients" },
-    { value: "+10", label: "Total Projects" }
+    { value: "+5", label: "Total Projects" }
   ];
 
   // Social links
