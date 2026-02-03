@@ -44,7 +44,7 @@ function Home() {
             </div>
 
             <div className="text-center md:text-left">
-              <p className="text-xs md:text-sm tracking-widest text-white/60 mb-2">WEB DEVELOPER</p>
+              <p className="text-xs md:text-sm tracking-widest text-white/60 mb-2">FULLSTACK WEB DEVELOPER</p>
               <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Biruk Fikadu
               </h1>
@@ -113,8 +113,8 @@ function Home() {
         
         {/* CV DOWNLOAD */}
         <a 
-          href="/resume.pdf" 
-          download
+          href="/Biruk_Fikadu_Resume.pdf" 
+          download="Biruk_Fikadu_Fullstack_Developer_Resume.pdf"
           className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] to-[#0e0e0e] 
             p-6 border border-white/10 hover:border-blue-500/30 hover:bg-gradient-to-br 
             hover:from-[#141414] hover:to-[#1a1a2a] transition-all duration-300 
@@ -126,7 +126,8 @@ function Home() {
           </div>
           <p className="text-lg font-medium mb-2">Download CV</p>
           <p className="text-xs text-white/50 group-hover:text-blue-400/70 transition-colors">
-            PDF • 2.4 MB
+            PDF • Fullstack Developer
+
           </p>
         </a>
 
