@@ -125,7 +125,7 @@ const projectDetails = {
     description:
       "A full-stack search application designed to help teams quickly find relevant information from an internal knowledge base.",
     longDescription:
-      "Nexovate Knowledge Base Search is a scalable full-stack application focused on fast and accurate content discovery. It enables users to perform full-text searches across structured knowledge base articles, with support for efficient indexing, filtering, and optimized querying. The platform features a clean and responsive interface and is built to scale as datasets grow.",
+      "Nexovate Knowledge Base Search is a full-stack, scalable application developed for a company to support their call center agents. The platform allows agents to quickly and accurately find relevant information from the company’s internal knowledge base, improving response times and overall efficiency.The system supports full-text search across structured knowledge base articles, with advanced indexing, filtering, and optimized querying to ensure fast and reliable results. Its clean and responsive interface makes it easy for agents to navigate and access the information they need, while the backend is designed to scale as the dataset grows.This project was completed as a private company project, so the GitHub repository is not publicly accessible.",
     technologies: [
       "React",
       "Node.js",
