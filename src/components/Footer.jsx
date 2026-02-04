@@ -17,10 +17,10 @@ function Footer() {
             
             {/* Navigation Links */}
             <nav className='flex flex-wrap justify-center gap-x-12 gap-y-4 mb-10 text-sm font-medium uppercase tracking-widest'>
-                <a href="#" className='hover:underline'>Home</a>
-                <a href="about" className='hover:underline'>About</a>
-                <a href="projects" className='hover:underline'>Projects</a>
-                <a href="contact" className='hover:underline'>Contact</a>
+                <a href="/" className='hover:underline'>Home</a>
+                <a href="/about" className='hover:underline'>About</a>
+                <a href="/projects" className='hover:underline'>Projects</a>
+                <a href="/contact" className='hover:underline'>Contact</a>
             </nav>
 
             {/* Copyright Section */}
