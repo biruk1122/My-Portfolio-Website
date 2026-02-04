@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Globe, Code, Users, CheckCircle, ExternalLink, Target, Layers, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 
@@ -8,8 +8,6 @@ import NexovateImage2 from '../assets/Image-2.png';
 import NexovateImage3 from '../assets/Image-3.png';
 import NexovateImage4 from '../assets/Image-4.png';
 
-
-// This would typically come from an API or database
 const projectDetails = {
   1: {
     title: "MOVIE EXPLORER APP",

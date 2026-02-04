@@ -393,7 +393,7 @@ function About() {
                 ].map((skill, index) => (
                   <div 
                     key={index}
-                    className="group/skill bg-white/5 hover:bg-linear-to-br hover:from-blue-500/10 hover:to-purple-500/10 text-gray-400 hover:text-white px-6 py-4 rounded-2xl border border-white/5 hover:border-white/20 transition-all duration-300 hover:translate-y-[-4px] text-center font-medium"
+                    className="group/skill bg-white/5 hover:bg-linear-to-br hover:from-blue-500/10 hover:to-purple-500/10 text-gray-400 hover:text-white px-6 py-4 rounded-2xl border border-white/5 hover:border-white/20 transition-all duration-300 hover:translate-y-1 text-center font-medium"
                   >
                     {skill}
                     <div className="w-0 group-hover/skill:w-full h-0.5 bg-linear-to-r from-blue-500 to-purple-500 mt-2 transition-all duration-300"></div>
