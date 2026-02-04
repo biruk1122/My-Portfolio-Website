@@ -81,14 +81,14 @@ function Projects() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0b0b0b] via-[#111111] to-[#0a0a0a] text-white font-sans">
+    <div className="min-h-screen bg-linear-to-br from-[#0b0b0b] via-[#111111] to-[#0a0a0a] text-white font-sans">
       {/* Main Container */}
       <div className="container mx-auto px-4 py-12 max-w-7xl">
         
         {/* Animated Background Elements */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-l from-blue-500/5 to-cyan-500/5 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-linear-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-linear-to-l from-blue-500/5 to-cyan-500/5 rounded-full blur-3xl" />
         </div>
 
         {/* Header Section */}
@@ -100,7 +100,7 @@ function Projects() {
                 <span className="text-sm text-blue-400">PORTFOLIO</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold">
-                <span className="bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
                   Projects & Work
                 </span>
               </h1>
@@ -118,7 +118,7 @@ function Projects() {
           </p>
           
           {/* Animated underline */}
-          <div className="mt-8 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+          <div className="mt-8 w-24 h-1 bg-linear-to-r from-blue-500 to-purple-500 rounded-full"></div>
         </header>
 
         {/* Filter Tabs */}
@@ -130,7 +130,7 @@ function Projects() {
                 onClick={() => setFilter(category)}
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                   filter === category
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25'
+                    ? 'bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25'
                     : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/10'
                 }`}
               >
@@ -146,10 +146,10 @@ function Projects() {
             <Link 
               to={`/projects/${project.id}`} 
               key={project.id}
-              className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02]"
+              className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02]"
             >
               {/* Glow effect */}
-              <div className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${project.color}/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
+              <div className={`absolute -top-20 -right-20 w-40 h-40 bg-linear-to-br ${project.color}/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
               
               {/* Project Header */}
               <div className="relative mb-6">
@@ -167,7 +167,7 @@ function Projects() {
               {/* Stats */}
               {project.stats && (
                 <div className="flex items-center gap-4 mb-6 p-4 rounded-2xl bg-white/5">
-                  <div className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                  <div className="text-2xl font-bold bg-linear-to-r from-white to-gray-300 bg-clip-text text-transparent">
                     {project.stats.value}
                   </div>
                   <div className="flex-1">
@@ -183,7 +183,7 @@ function Projects() {
                     {project.stats.percentage && (
                       <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-gradient-to-r from-green-500 to-cyan-500 rounded-full"
+                          className="h-full bg-linear-to-r from-green-500 to-cyan-500 rounded-full"
                           style={{ width: project.stats.percentage }}
                         ></div>
                       </div>
@@ -229,7 +229,7 @@ function Projects() {
               </div>
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
                 <p className="text-gray-300 text-sm">{project.description}</p>
               </div>
             </Link>
@@ -238,7 +238,7 @@ function Projects() {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 mb-4 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-white/10">
+          <div className="inline-flex items-center gap-2 mb-4 px-6 py-3 rounded-full bg-linear-to-r from-blue-500/10 to-purple-500/10 border border-white/10">
             <span className="text-blue-400">Have a project in mind?</span>
           </div>
           <h2 className="text-3xl font-bold mb-6">
@@ -246,7 +246,7 @@ function Projects() {
           </h2>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1"
+            className="inline-flex items-center gap-3 bg-linear-to-r from-blue-600 to-purple-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1"
           >
             <span>Start a Project</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

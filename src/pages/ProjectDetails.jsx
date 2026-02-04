@@ -55,7 +55,7 @@ const projectDetails = {
     description:
       "A simple and responsive weather application that provides real-time weather information and city search suggestions using the OpenWeatherMap API.",
     longDescription:
-      "Weather App is a modern web application built with React, Vite, and TailwindCSS that allows users to search weather conditions by city. The app fetches real-time data from the OpenWeatherMap API and displays detailed information such as temperature, humidity, wind speed, and location. It also includes dynamic weather icons based on current conditions and a visually appealing, fully responsive user interface with gradient backgrounds.",
+      "Weather App is a modern web application built with React, Vite, and TailwindCSS that allows users to search weather conditions by city. The app fetches real-time data from the OpenWeatherMap API and displays detailed information such as temperature, humidity, wind speed, and location. It also includes dynamic weather icons based on current conditions and a visually appealing, fully responsive user interface with linear backgrounds.",
     technologies: [
       "React",
       "Vite",
@@ -201,7 +201,7 @@ function ProjectDetails() {
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-[#0b0b0b] via-[#111111] to-[#0a0a0a] text-white flex items-center justify-center">
+      <div className="min-h-screen bg-linear-to-br from-[#0b0b0b] via-[#111111] to-[#0a0a0a] text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4">Project Not Found</h1>
           <Link to="/projects" className="text-blue-400 hover:text-blue-300">
@@ -228,7 +228,7 @@ function ProjectDetails() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0b0b0b] via-[#111111] to-[#0a0a0a] text-white font-sans">
+    <div className="min-h-screen bg-linear-to-br from-[#0b0b0b] via-[#111111] to-[#0a0a0a] text-white font-sans">
       <div className="container mx-auto px-4 py-12 max-w-6xl">
         
         {/* Back Button */}
@@ -248,7 +248,7 @@ function ProjectDetails() {
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className={`bg-gradient-to-r ${project.color} bg-clip-text text-transparent`}>
+            <span className={`bg-linear-to-r ${project.color} bg-clip-text text-transparent`}>
               {project.title}
             </span>
           </h1>
@@ -272,7 +272,7 @@ function ProjectDetails() {
             
             {/* Screenshots Section - Only show if there are screenshots */}
             {screenshots.length > 0 ? (
-              <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
+              <div className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
                 <h2 className="text-2xl font-bold mb-6 text-white">Project Screenshots</h2>
                 
                 {/* Main Image Display */}
@@ -342,21 +342,21 @@ function ProjectDetails() {
                 </div>
               </div>
             ) : (
-              <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
+              <div className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
                 <h2 className="text-2xl font-bold mb-6 text-white">Project Screenshots</h2>
                 <p className="text-gray-400 text-center py-12">No screenshots are available for this project. You can visit the site using the live demo link.</p>
               </div>
             )}
 
             {/* Description */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
+            <div className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
               <h2 className="text-2xl font-bold mb-6 text-white">Project Overview</h2>
               <p className="text-gray-300 leading-relaxed mb-6">{project.description}</p>
               <p className="text-gray-400 leading-relaxed">{project.longDescription}</p>
             </div>
 
             {/* Features */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
+            <div className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
               <h2 className="text-2xl font-bold mb-6 text-white">Key Features</h2>
               <div className="grid md:grid-cols-2 gap-4">
                 {project.features.map((feature, index) => (
@@ -373,7 +373,7 @@ function ProjectDetails() {
           <div className="space-y-8">
             
             {/* Stats Card */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
+            <div className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
               <h3 className="text-xl font-bold mb-6 text-white">Project Stats</h3>
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
@@ -408,7 +408,7 @@ function ProjectDetails() {
             </div>
 
             {/* Technologies */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
+            <div className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
               <h3 className="text-xl font-bold mb-6 text-white">Technologies Used</h3>
               <div className="flex flex-wrap gap-3">
                 {project.technologies.map((tech, index) => (
@@ -423,7 +423,7 @@ function ProjectDetails() {
             </div>
 
             {/* Links */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
+            <div className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
               <h3 className="text-xl font-bold mb-6 text-white">Project Links</h3>
               <div className="space-y-4">
                 {project.liveUrl && (

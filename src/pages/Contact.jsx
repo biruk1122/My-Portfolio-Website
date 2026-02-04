@@ -122,12 +122,12 @@ function Contact() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0b0b0b] via-[#111111] to-[#0a0a0a] text-white font-sans">
+    <div className="min-h-screen bg-linear-to-br from-[#0b0b0b] via-[#111111] to-[#0a0a0a] text-white font-sans">
       {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-l from-cyan-500/5 to-teal-500/5 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-pink-500/5 to-orange-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-linear-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-linear-to-l from-cyan-500/5 to-teal-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-linear-to-r from-pink-500/5 to-orange-500/5 rounded-full blur-3xl" />
       </div>
 
       {/* Main Container */}
@@ -141,7 +141,7 @@ function Contact() {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
               Let's Connect
             </span>
           </h1>
@@ -151,7 +151,7 @@ function Contact() {
             I'm always excited to discuss new opportunities and creative ideas.
           </p>
           
-          <div className="mt-8 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+          <div className="mt-8 w-24 h-1 bg-linear-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
         </header>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
@@ -166,21 +166,21 @@ function Contact() {
                     href={item.link}
                     target={item.link.includes('http') ? '_blank' : '_self'}
                     rel={item.link.includes('http') ? 'noopener noreferrer' : ''}
-                    className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02]"
+                    className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02]"
                   >
-                    {/* Animated gradient background */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                    {/* Animated linear background */}
+                    <div className={`absolute inset-0 bg-linear-to-br ${item.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
                     
                     {/* Glow effect */}
-                    <div className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${item.color} rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-700`} />
+                    <div className={`absolute -top-20 -right-20 w-40 h-40 bg-linear-to-br ${item.color} rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-700`} />
                     
                     <div className="relative">
-                      <div className={`inline-flex p-3 rounded-2xl bg-gradient-to-br ${item.color}/20 mb-6 border ${item.color.split(' ')[1].replace('to-', 'border-')}/30`}>
+                      <div className={`inline-flex p-3 rounded-2xl bg-linear-to-br ${item.color}/20 mb-6 border ${item.color.split(' ')[1].replace('to-', 'border-')}/30`}>
                         {item.icon}
                       </div>
                       
                       <h3 className="text-lg font-semibold text-gray-300 mb-2">{item.title}</h3>
-                      <p className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 transition-all duration-300">
+                      <p className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-white group-hover:to-gray-300 transition-all duration-300">
                         {item.value}
                       </p>
                       <p className="text-sm text-gray-500">{item.description}</p>
@@ -194,21 +194,21 @@ function Contact() {
                 ) : (
                   <div
                     key={index}
-                    className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02]"
+                    className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02]"
                   >
-                    {/* Animated gradient background */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                    {/* Animated linear background */}
+                    <div className={`absolute inset-0 bg-linear-to-br ${item.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
                     
                     {/* Glow effect */}
-                    <div className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${item.color} rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-700`} />
+                    <div className={`absolute -top-20 -right-20 w-40 h-40 bg-linear-to-br ${item.color} rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-700`} />
                     
                     <div className="relative">
-                      <div className={`inline-flex p-3 rounded-2xl bg-gradient-to-br ${item.color}/20 mb-6 border ${item.color.split(' ')[1].replace('to-', 'border-')}/30`}>
+                      <div className={`inline-flex p-3 rounded-2xl bg-linear-to-br ${item.color}/20 mb-6 border ${item.color.split(' ')[1].replace('to-', 'border-')}/30`}>
                         {item.icon}
                       </div>
                       
                       <h3 className="text-lg font-semibold text-gray-300 mb-2">{item.title}</h3>
-                      <p className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 transition-all duration-300">
+                      <p className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-white group-hover:to-gray-300 transition-all duration-300">
                         {item.value}
                       </p>
                       <p className="text-sm text-gray-500">{item.description}</p>
@@ -219,12 +219,12 @@ function Contact() {
             </div>
 
             {/* Social Media Grid */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
+            <div className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
               <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl border border-purple-500/20">
+                <div className="p-3 bg-linear-to-br from-purple-500/20 to-pink-500/20 rounded-2xl border border-purple-500/20">
                   <Globe className="w-8 h-8 text-purple-400" />
                 </div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                <h2 className="text-3xl font-bold bg-linear-to-r from-white to-gray-300 bg-clip-text text-transparent">
                   Social Networks
                 </h2>
               </div>
@@ -267,12 +267,12 @@ function Contact() {
           {/* Right Column - Working Hours & Quick Connect */}
           <div className="space-y-8">
             {/* Working Hours Card */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10 hover:border-white/20 transition-all duration-500">
+            <div className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10 hover:border-white/20 transition-all duration-500">
               <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl border border-blue-500/20">
+                <div className="p-3 bg-linear-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl border border-blue-500/20">
                   <Clock className="w-8 h-8 text-blue-400" />
                 </div>
-                <h2 className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                <h2 className="text-2xl font-bold bg-linear-to-r from-white to-gray-300 bg-clip-text text-transparent">
                   Working Hours
                 </h2>
               </div>
@@ -296,8 +296,8 @@ function Contact() {
             </div>
 
             {/* Quick Connect Card */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600/20 via-blue-700/20 to-purple-600/20 p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-500">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-blue-600/20 via-blue-700/20 to-purple-600/20 p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-500">
+              <div className="absolute inset-0 bg-linear-to-r from-blue-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               
               <div className="relative text-center">
                 <div className="inline-flex p-3 rounded-2xl bg-blue-500/20 mb-6 border border-blue-500/30">
@@ -333,7 +333,7 @@ function Contact() {
             </div>
 
             {/* Stats Card */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10 hover:border-white/20 transition-all duration-500">
+            <div className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10 hover:border-white/20 transition-all duration-500">
               <div className="flex items-center gap-3 mb-6">
                 <Sparkles className="w-6 h-6 text-yellow-500" />
                 <h3 className="text-xl font-bold text-white">Connection Stats</h3>
@@ -346,7 +346,7 @@ function Contact() {
                     <span className="text-green-400 font-bold">98%</span>
                   </div>
                   <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                    <div className="w-full h-full bg-gradient-to-r from-green-500 to-cyan-500 rounded-full"></div>
+                    <div className="w-full h-full bg-linear-to-r from-green-500 to-cyan-500 rounded-full"></div>
                   </div>
                 </div>
                 
@@ -356,7 +356,7 @@ function Contact() {
                     <span className="text-blue-400 font-bold">2h</span>
                   </div>
                   <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                    <div className="w-3/4 h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                    <div className="w-3/4 h-full bg-linear-to-r from-blue-500 to-purple-500 rounded-full"></div>
                   </div>
                 </div>
                 
@@ -367,8 +367,8 @@ function Contact() {
 
         {/* CTA Section */}
         <div className="text-center mb-16">
-          <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 mb-8">
-            <div className="px-8 py-4 rounded-xl bg-gradient-to-br from-[#141414] to-[#1a1a1a] border border-white/10">
+          <div className="inline-block p-1 rounded-2xl bg-linear-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 mb-8">
+            <div className="px-8 py-4 rounded-xl bg-linear-to-br from-[#141414] to-[#1a1a1a] border border-white/10">
               <h2 className="text-2xl font-bold mb-4">
                 Let's Build Something Amazing Together
               </h2>
@@ -381,7 +381,7 @@ function Contact() {
           <div className="flex flex-wrap justify-center gap-6">
             <a
               href="mailto:birukfikadu29@gmail.com"
-              className="group/btn inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1"
+              className="group/btn inline-flex items-center gap-3 bg-linear-to-r from-blue-600 to-purple-600 text-white font-semibold px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1"
             >
               <Mail className="w-5 h-5" />
               <span>Send Email</span>
