@@ -11,11 +11,10 @@ function Home() {
     { value: "+5", label: "Total Projects" }
   ];
 
-  // Social links
+  // Social links - Removed Upwork, added your links
   const socials = [
-    { icon: <FiLinkedin />, label: "LinkedIn" },
-    { icon: <FiTwitter />, label: "Twitter" },
-    { icon: <SiUpwork />, label: "Upwork" }
+    { icon: <FiLinkedin />, label: "LinkedIn", url: "https://www.linkedin.com/in/biruk-fikadu-b6053a240" },
+    { icon: <FiTwitter />, label: "Twitter", url: "https://twitter.com/BirukFikadu10" }
   ];
 
   return (
@@ -163,7 +162,9 @@ function Home() {
             {socials.map((social, index) => (
               <a
                 key={index}
-                href="#"
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group/social w-12 h-12 flex items-center justify-center rounded-xl 
                   bg-gradient-to-br from-white/5 to-white/10 border border-white/10 
                   hover:border-white/30 hover:from-white/10 hover:to-white/15 

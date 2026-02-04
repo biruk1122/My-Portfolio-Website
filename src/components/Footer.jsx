@@ -1,4 +1,6 @@
 import {Globe} from 'lucide-react'
+import {Link} from 'react-router-dom';
+
 
 function Footer() {
 
@@ -17,10 +19,10 @@ function Footer() {
             
             {/* Navigation Links */}
             <nav className='flex flex-wrap justify-center gap-x-12 gap-y-4 mb-10 text-sm font-medium uppercase tracking-widest'>
-                <a href="/" className='hover:underline'>Home</a>
-                <a href="/about" className='hover:underline'>About</a>
-                <a href="/projects" className='hover:underline'>Projects</a>
-                <a href="/contact" className='hover:underline'>Contact</a>
+                <Link to="/" className='hover:underline'>Home</Link>
+                <Link to="/about" className='hover:underline'>About</Link>
+                <Link to="/projects" className='hover:underline'>Projects</Link>
+                <Link to="/contact" className='hover:underline'>Contact</Link>
             </nav>
 
             {/* Copyright Section */}
