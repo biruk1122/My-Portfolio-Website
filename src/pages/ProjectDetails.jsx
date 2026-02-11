@@ -185,7 +185,7 @@ const projectDetails = {
       team: "Solo Project"
     },
     color: "from-purple-600 to-indigo-700",
-    liveUrl: "#",
+    liveUrl: "https://habesha-gptai.vercel.app",
     githubUrl: "https://github.com/biruk1122/HabeshaGPTAI",
  
   }
