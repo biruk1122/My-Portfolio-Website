@@ -332,9 +332,9 @@ function About() {
                 <div className="space-y-8">
                   <div className="relative pl-10 before:absolute before:left-0 before:top-6 before:w-4 before:h-4 before:bg-linear-to-r from-blue-500 to-purple-500 before:rounded-full before:animate-pulse">
                     <div className="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 bg-blue-500/10 px-4 py-2 rounded-full mb-3 border border-blue-500/20">
-                      <span>2021 - 2023</span>
+                      <span>2021 - 2026</span>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">WordPress Developer</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">Full Stack & WordPress Developer</h3>
                     <p className="text-gray-400">Freelance & Professional Development</p>
                     <ul className="mt-4 space-y-2 text-gray-500 text-sm">
                       <li className="flex items-center gap-2">
@@ -363,9 +363,9 @@ function About() {
                 
                 <div className="space-y-8">
                   <div className="relative pl-10 before:absolute before:left-0 before:top-6 before:w-4 before:h-4 before:bg-linear-to-r from-green-500 to-cyan-500 before:rounded-full before:animate-pulse">
-                    <div className="inline-flex items-center gap-2 text-sm font-semibold text-green-400 bg-green-500/10 px-4 py-2 rounded-full mb-3 border border-green-500/20">
+                    {/* <div className="inline-flex items-center gap-2 text-sm font-semibold text-green-400 bg-green-500/10 px-4 py-2 rounded-full mb-3 border border-green-500/20">
                       <span>2015 – 2019</span>
-                    </div>
+                    </div> */}
                     <h3 className="text-xl font-semibold text-white mb-2">Bachelor's Degree</h3>
                     <p className="text-white font-medium">Electrical & Computer Engineering</p>
                     <p className="text-gray-400 mt-2">Assosa University</p>

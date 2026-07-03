@@ -6,7 +6,7 @@ import { SiUpwork } from "react-icons/si";
 function Home() {
   // Stats data
   const stats = [
-    { value: "+02", label: "Years Experience" },
+    { value: "+03", label: "Years Experience" },
     { value: "+5", label: "Clients" },
     { value: "+5", label: "Total Projects" }
   ];

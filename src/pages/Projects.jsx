@@ -63,6 +63,54 @@ const allProjects = [
     technologies: ["React", "Node.js", "Express", "MongoDB", "MERN Stack"],
     color: "from-purple-600 to-indigo-700",
     icon: "💬"
+  },
+  {
+    id: 6,
+    title: "NEXOVATE TRADING PLC",
+    subtitle: "Tech Company Profile Website",
+    category: "Web Application",
+    type: "Frontend Development",
+    stats: { value: "Tech", label: "Company", percentage: "Live Site" },
+    description: "A professional company profile website for Nexovate Trading PLC, showcasing their tech services and expertise.",
+    technologies: ["React", "Tailwind CSS", "Vite", "Netlify"],
+    color: "from-blue-600 to-cyan-500",
+    icon: "🏢"
+  },
+  {
+    id: 7,
+    title: "LELA CREATIVE MANAGEMENT",
+    subtitle: "Artist Management Company Profile",
+    category: "Web Application",
+    type: "Frontend Development",
+    stats: { value: "Artist", label: "Management", percentage: "Live Site" },
+    description: "A company profile website for Lela Creative Management, connecting Ethiopian artists with global opportunities.",
+    technologies: ["React", "Tailwind CSS", "Vite"],
+    color: "from-rose-500 to-purple-600",
+    icon: "🎵"
+  },
+  {
+    id: 8,
+    title: "FUA CLEANING SERVICE",
+    subtitle: "Cleaning Service Company Website",
+    category: "Web Application",
+    type: "Frontend Development",
+    stats: { value: "Cleaning", label: "Service", percentage: "Live Site" },
+    description: "A professional cleaning service website for FUA Cleaning Service, showcasing their residential cleaning solutions.",
+    technologies: ["React", "Tailwind CSS", "Vite"],
+    color: "from-emerald-400 to-teal-600",
+    icon: "🧹"
+  },
+  {
+    id: 9,
+    title: "HABESHA MART",
+    subtitle: "Full-Stack E-Commerce Platform",
+    category: "Web Application",
+    type: "Full-Stack Development",
+    stats: { value: "MERN", label: "Stack", percentage: "Online Payments" },
+    description: "A full-stack e-commerce platform with Chapa & Stripe payment integration for online shopping.",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Chapa", "Stripe"],
+    color: "from-orange-500 to-red-600",
+    icon: "🛒"
   }
 ];
 

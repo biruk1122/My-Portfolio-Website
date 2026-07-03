@@ -7,6 +7,9 @@ import NexovateImage1 from '../assets/Image-1.png';
 import NexovateImage2 from '../assets/Image-2.png';
 import NexovateImage3 from '../assets/Image-3.png';
 import NexovateImage4 from '../assets/Image-4.png';
+import HabeshaMartImage1 from '../assets/Seller dashboard 1.png';
+import HabeshaMartImage2 from '../assets/Seller Dashboard 2.png';
+import HabeshaMartImage3 from '../assets/Seller Dashbaord 3.png';
 
 const projectDetails = {
   1: {
@@ -123,7 +126,7 @@ const projectDetails = {
     description:
       "A full-stack search application designed to help teams quickly find relevant information from an internal knowledge base.",
     longDescription:
-      "Nexovate Knowledge Base Search is a full-stack, scalable application developed for a company to support their call center agents. The platform allows agents to quickly and accurately find relevant information from the company’s internal knowledge base, improving response times and overall efficiency.The system supports full-text search across structured knowledge base articles, with advanced indexing, filtering, and optimized querying to ensure fast and reliable results. Its clean and responsive interface makes it easy for agents to navigate and access the information they need, while the backend is designed to scale as the dataset grows.This project was completed as a private company project, so the GitHub repository is not publicly accessible.",
+      "Nexovate Knowledge Base Search is a full-stack, scalable application developed for a company to support their call center agents. The platform allows agents to quickly and accurately find relevant information from the company\u2019s internal knowledge base, improving response times and overall efficiency.The system supports full-text search across structured knowledge base articles, with advanced indexing, filtering, and optimized querying to ensure fast and reliable results. Its clean and responsive interface makes it easy for agents to navigate and access the information they need, while the backend is designed to scale as the dataset grows.This project was completed as a private company project, so the GitHub repository is not publicly accessible.",
     technologies: [
       "React",
       "Node.js",
@@ -188,6 +191,149 @@ const projectDetails = {
     liveUrl: "https://habesha-gptai.vercel.app",
     githubUrl: "https://github.com/biruk1122/HabeshaGPTAI",
  
+  },
+
+  6: {
+    title: "NEXOVATE TRADING PLC",
+    subtitle: "Tech Company Profile Website",
+    category: "Web Application",
+    type: "Frontend Development",
+    description:
+      "A professional company profile website for Nexovate Trading PLC, a leading technology company operating in Ethiopia.",
+    longDescription:
+      "Nexovate Trading PLC is a technology company based in Ethiopia that specializes in a wide range of tech services including Development, Cybersecurity, CCTV Camera Systems, Data Center Solutions, IT Consulting, Digital Transformation, and Customer Service Center solutions. This company profile website was built to showcase Nexovate Trading PLC\u2019s comprehensive service offerings, establish their professional online presence, and provide potential clients with detailed information about their technology solutions. The website features a modern, responsive design with sections highlighting each service category, company information, and contact details. Please note that the source code for this project resides in a private repository. To view the live site, please visit the live demo link.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Vite"
+    ],
+    features: [
+      "Professional Company Profile Showcase",
+      "Service Categories Display",
+      "Responsive & Mobile-Friendly Design",
+      "Modern UI with Tailwind CSS",
+      "Contact & Inquiry Section",
+      "Fast Performance with Vite"
+    ],
+    stats: {
+      project: "Client Project",
+      focus: "Frontend",
+      launch: "2026",
+      team: "Solo Project"
+    },
+    color: "from-blue-600 to-cyan-500",
+    liveUrl: "https://nexovatetrading.com/",
+    githubUrl: null
+  },
+
+  7: {
+    title: "LELA CREATIVE MANAGEMENT",
+    subtitle: "Artist Management Company Profile",
+    category: "Web Application",
+    type: "Frontend Development",
+    description:
+      "A company profile website for Lela Creative Management, an Ethiopian artist management company connecting local talent with global opportunities.",
+    longDescription:
+      "Lela Creative Management is an Ethiopian artist management company that works with famous Ethiopian musicians and film artists. The company specializes in Brand Partnerships, Global Partnerships, Event Services, and Film & TV Production. This website serves as the company\u2019s professional online presence, showcasing their portfolio of managed artists, highlighting their services, and providing a platform for potential collaborations. The site features a visually engaging design that reflects the creative industry, with sections dedicated to their artists, services, past events, and contact information. Please note that the source code for this project resides in a private repository. To view the live site, please visit the live demo link.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Vite"
+    ],
+    features: [
+      "Artist Portfolio Showcase",
+      "Service Offerings Display",
+      "Event & Production Gallery",
+      "Responsive & Mobile-Friendly Design",
+      "Brand & Global Partnership Info",
+      "Contact & Booking Section"
+    ],
+    stats: {
+      project: "Client Project",
+      focus: "Frontend",
+      launch: "2026",
+      team: "Solo Project"
+    },
+    color: "from-rose-500 to-purple-600",
+    liveUrl: "https://lelamanagement.com",
+    githubUrl: null
+  },
+
+  8: {
+    title: "FUA CLEANING SERVICE",
+    subtitle: "Cleaning Service Company Website",
+    category: "Web Application",
+    type: "Frontend Development",
+    description:
+      "A professional cleaning service website for FUA Cleaning Service, showcasing their residential and commercial cleaning solutions.",
+    longDescription:
+      "FUA Cleaning Service is a professional cleaning company that offers a wide range of specialized cleaning services including Carpet Cleaning, Sofa & Chair Cleaning, Arabian Mejlis Cleaning, and Mattress Cleaning. This company profile website was built to establish the company\u2019s online presence and showcase their expertise in the cleaning industry. The website features detailed service descriptions, professional imagery, pricing information, and an easy-to-use booking inquiry system. The design emphasizes cleanliness and professionalism with a clean, modern aesthetic that builds trust with potential customers. Please note that the source code for this project resides in a private repository. To view the live site, please visit the live demo link.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Vite"
+    ],
+    features: [
+      "Service Listings with Details",
+      "Professional Cleaning Portfolio",
+      "Responsive & Mobile-Friendly Design",
+      "Booking & Inquiry System",
+      "Clean & Modern UI Design",
+      "Service Area Information"
+    ],
+    stats: {
+      project: "Client Project",
+      focus: "Frontend",
+      launch: "2026",
+      team: "Solo Project"
+    },
+    color: "from-emerald-400 to-teal-600",
+    liveUrl: "https://fuacleaning.com",
+    githubUrl: null
+  },
+
+  9: {
+    title: "HABESHA MART",
+    subtitle: "Full-Stack E-Commerce Platform",
+    category: "Web Application",
+    type: "Full-Stack Development",
+    description:
+      "A full-stack e-commerce platform built with the MERN stack, featuring Chapa and Stripe payment integration for seamless online shopping.",
+    longDescription:
+      "Habesha Mart is a full-stack e-commerce web application built with the MERN stack (MongoDB, Express, React, Node.js). The platform allows users to browse products, add items to their cart, and complete purchases online with integrated payment processing through Chapa and Stripe. The application features a comprehensive seller dashboard where vendors can manage their products, track orders, and monitor sales performance. The platform includes secure user authentication, product management, order tracking, and a responsive shopping experience optimized for all devices. Please note that the source code for this project resides in a private repository. To view the live site, please visit the live demo link.",
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Chapa",
+      "Stripe",
+      "MERN Stack"
+    ],
+    features: [
+      "Product Browsing & Search",
+      "Shopping Cart Management",
+      "Chapa Payment Integration",
+      "Stripe Payment Integration",
+      "Seller Dashboard with Analytics",
+      "Order Management & Tracking",
+      "Secure User Authentication",
+      "Responsive Design for All Devices"
+    ],
+    stats: {
+      project: "Client Project",
+      focus: "Full-Stack",
+      launch: "2026",
+      team: "Solo Project"
+    },
+    color: "from-orange-500 to-red-600",
+    liveUrl: "https://habesha-mart-swart.vercel.app",
+    githubUrl: null,
+    screenshots: [
+      HabeshaMartImage1,
+      HabeshaMartImage2,
+      HabeshaMartImage3
+    ]
   }
 };
 
