@@ -10,6 +10,12 @@ import NexovateImage4 from '../assets/Image-4.png';
 import HabeshaMartImage1 from '../assets/Seller dashboard 1.png';
 import HabeshaMartImage2 from '../assets/Seller Dashboard 2.png';
 import HabeshaMartImage3 from '../assets/Seller Dashbaord 3.png';
+import LmsStudentDashboard from '../assets/lms-student-dashboard.png';
+import LmsCourseCatalog from '../assets/lms-course-catalog.png';
+import LmsExamInterface from '../assets/lms-exam-interface.png';
+import LmsExamSupport from '../assets/lms-exam-support.png';
+import LmsAdminAnalytics from '../assets/lms-admin-analytics.png';
+import LmsAiDocumentStudio from '../assets/lms-ai-document-studio.png';
 
 const projectDetails = {
   1: {
@@ -292,6 +298,62 @@ const projectDetails = {
     githubUrl: null
   },
 
+  10: {
+    title: "SISAY ACADEMY LMS",
+    subtitle: "AI-Assisted Student Learning Management System",
+    category: "Web Application",
+    type: "Full-Stack Development",
+    description:
+      "A modern learning management system with dedicated student and admin portals for course access, grade-based learning, examinations, academic support, AI-assisted content creation, and real-time performance monitoring.",
+    longDescription:
+      "Sisay Academy is a complete education platform designed around two connected experiences. Students register according to their grade level, access assigned courses and units, take course-based exams, review their scores, and ask teachers or administrators questions when they need clarification or support. The admin portal centralizes academic operations: administrators can build exams manually by course and unit, upload learning documents to generate exams and flashcards with AI, manage student course access, respond to exam questions, monitor individual scores, and use analytics to understand enrollment, activity, participation, and overall learning performance.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "REST API",
+      "Role-Based Access",
+      "AI Integration",
+      "Vercel"
+    ],
+    features: [
+      "Dedicated Student & Admin Portals",
+      "Grade-Based Registration & Course Discovery",
+      "Course and Unit-Based Online Exams",
+      "Exam Results, Scores & Progress Tracking",
+      "Student Questions, Teacher Replies & Support",
+      "Manual Exam and Question Builder",
+      "AI Exam Generation from Uploaded Documents",
+      "AI-Generated Flashcards, Summaries & Explanations",
+      "Student Course Access Management",
+      "Admin Analytics for Enrollment, Activity & Performance"
+    ],
+    stats: {
+      project: "EdTech Platform",
+      focus: "Full-Stack + AI",
+      launch: "Live",
+      team: "Solo Project"
+    },
+    color: "from-blue-500 to-violet-600",
+    liveUrl: "https://sisayacademy.vercel.app",
+    githubUrl: null,
+    screenshots: [
+      LmsStudentDashboard,
+      LmsCourseCatalog,
+      LmsExamInterface,
+      LmsExamSupport,
+      LmsAdminAnalytics,
+      LmsAiDocumentStudio
+    ],
+    screenshotLabels: [
+      "Student Dashboard",
+      "Grade-Based Course Catalog",
+      "Student Exam Interface",
+      "Exam Questions & Support",
+      "Admin Analytics Dashboard",
+      "AI Document Studio"
+    ]
+  },
+
   9: {
     title: "HABESHA MART",
     subtitle: "Full-Stack E-Commerce Platform",
@@ -358,6 +420,7 @@ function ProjectDetails() {
 
   // Check if project has screenshots, use empty array if not
   const screenshots = project.screenshots || [];
+  const screenshotLabels = project.screenshotLabels || [];
 
   const nextImage = () => {
     if (screenshots.length > 0) {
@@ -417,7 +480,14 @@ function ProjectDetails() {
             {/* Screenshots Section - Only show if there are screenshots */}
             {screenshots.length > 0 ? (
               <div className="group relative overflow-hidden rounded-3xl bg-linear-to-br from-[#141414] via-[#0f0f0f] to-[#1a1a1a] p-8 border border-white/10">
-                <h2 className="text-2xl font-bold mb-6 text-white">Project Screenshots</h2>
+                <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
+                  <h2 className="text-2xl font-bold text-white">Project Screenshots</h2>
+                  {screenshotLabels[selectedImage] && (
+                    <span className="px-3 py-1 rounded-full bg-blue-500/10 text-sm text-blue-300 border border-blue-500/20">
+                      {screenshotLabels[selectedImage]}
+                    </span>
+                  )}
+                </div>
                 
                 {/* Main Image Display */}
                 <div className="relative mb-6">
@@ -427,8 +497,8 @@ function ProjectDetails() {
                   >
                     <img 
                       src={screenshots[selectedImage]} 
-                      alt={`${project.title} screenshot ${selectedImage + 1}`}
-                      className="w-full h-full object-cover group-hover/main-img:scale-105 transition-transform duration-500"
+                      alt={screenshotLabels[selectedImage] || `${project.title} screenshot ${selectedImage + 1}`}
+                      className="w-full h-full object-contain group-hover/main-img:scale-[1.02] transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover/main-img:bg-black/20 transition-all duration-300 flex items-center justify-center">
                       <Maximize2 className="w-8 h-8 text-white opacity-0 group-hover/main-img:opacity-100 transition-opacity" />
@@ -462,11 +532,12 @@ function ProjectDetails() {
                 </div>
                 
                 {/* Thumbnail Gallery */}
-                <div className="grid grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {screenshots.map((screenshot, index) => (
                     <button
                       key={index}
                       onClick={() => setSelectedImage(index)}
+                      aria-label={`View ${screenshotLabels[index] || `screenshot ${index + 1}`}`}
                       className={`relative h-24 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
                         selectedImage === index 
                           ? 'border-blue-500 scale-105' 
@@ -475,8 +546,8 @@ function ProjectDetails() {
                     >
                       <img 
                         src={screenshot} 
-                        alt={`Thumbnail ${index + 1}`}
-                        className="w-full h-full object-cover"
+                        alt={screenshotLabels[index] || `Thumbnail ${index + 1}`}
+                        className="w-full h-full object-contain bg-black/20"
                       />
                       <div className={`absolute inset-0 ${
                         selectedImage === index ? 'bg-blue-500/20' : 'bg-black/0 hover:bg-black/20'
