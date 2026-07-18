@@ -101,6 +101,18 @@ const allProjects = [
     icon: "🧹"
   },
   {
+    id: 10,
+    title: "SISAY ACADEMY LMS",
+    subtitle: "AI-Assisted Student Learning Management System",
+    category: "Web Application",
+    type: "Full-Stack Development",
+    stats: { value: "2 Portals", label: "Student & Admin", percentage: "AI-Assisted" },
+    description: "A dual-portal learning management system for grade-based courses, exams, student support, AI content generation, access control, and performance analytics.",
+    technologies: ["React", "Tailwind CSS", "REST API", "AI Integration", "Vercel"],
+    color: "from-blue-500 to-violet-600",
+    icon: "🎓"
+  },
+  {
     id: 9,
     title: "HABESHA MART",
     subtitle: "Full-Stack E-Commerce Platform",
